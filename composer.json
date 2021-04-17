@@ -1,0 +1,20 @@
+{
+  "name": "p4p1/mon_annuaire",
+  "description": "Un petit projet",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Abdoulaye NDOYE",
+      "email": "pa.ndoye@outlook.fr"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "Core\\": "core/"
+    }
+  }
+}
