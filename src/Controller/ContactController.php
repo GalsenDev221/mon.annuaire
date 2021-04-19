@@ -11,12 +11,11 @@ class ContactController
 {
     public function index()
     {
-        $this->render('contact/index');
+        echo "Bienvenue sur la page d'accueil";
     }
 
     public function show($id)
     {
-        /* echo 'JE suis le contact numero ' . $id; */
-        $this->render('contact/show', compact('id'));
+        echo "Je suis le contact numero $id";
     }
 }

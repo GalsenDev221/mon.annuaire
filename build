@@ -1,0 +1,3 @@
+#!/usr/bin/env php
+<?php
+echo shell_exec('php -S localhost:4000 -t public -ddisplay_errors=1');
