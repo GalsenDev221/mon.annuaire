@@ -2,16 +2,20 @@
 
 namespace App\Controller;
 
+use Core\Controller;
+
+require __DIR__ . '/../../vendor/autoload.php';
+
 /**
  * Class ContactController
  *
  * @author Abdoulaye NDOYE <pa.ndoye@outlook.fr>
  */
-class ContactController
+class ContactController extends Controller
 {
     public function index()
     {
-        echo "Bienvenue sur la page d'accueil";
+        return $this->render('contact/index.php',["name"=>"jules jacques coly"]);
     }
 
     public function show($id)
