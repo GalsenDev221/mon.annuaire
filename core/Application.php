@@ -10,10 +10,12 @@ namespace Core;
 class Application
 {
     public Router $router;
+    public Controller $controller;
 
     public function __construct()
     {
-        $this->router = new Router();
+        $this->controller = new Controller();
+        $this->router = new Router($this->controller);
     }
 
     public function run()

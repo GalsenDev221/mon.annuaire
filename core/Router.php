@@ -11,6 +11,12 @@ class Router
 {
     private array $routes = [];
     private array $matches;
+    public Controller $controller;
+
+    public function __construct($controller)
+    {
+        $this->controller = $controller;
+    }
 
     public function get($pathServer, $actionServer)
     {
@@ -40,7 +46,7 @@ class Router
         }
 
         // Envoie une page d'erreur si l'url n'existe pas
-        echo 'Page introuvable';
+        $this->controller->render('404.php', ['title' => 'Page Introuvable']);
         return header('HTTP/1.0 404 Not Found');
     }
 
