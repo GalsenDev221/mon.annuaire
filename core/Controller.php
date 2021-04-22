@@ -19,7 +19,7 @@ class Controller
      */
     public function render($template, $context = null)
     {
-        isset($context) ?? extract($context);
+        isset($context) ? extract($context) : null;
 
         ob_start();
         require __DIR__ . '/../templates/' . $template;

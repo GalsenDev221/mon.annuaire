@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Annuaire Telephonique | <?= $context['title'] ?></title>
+    <title>Annuaire Telephonique | <?= $title ?></title>
     <link rel="stylesheet" href="/styles/main.css" type="text/css" media="all">
 </head>
 <body>
