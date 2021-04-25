@@ -2,6 +2,12 @@
 
 Ceci est un petit projet réalisé par les développeurs de Galsen Dev.
 
+## Contribuer
+
+Si vous souhaitez une contribution, veuillez d'abord **créer une branche** où vous allez y mettre votre code (`git checkout -b nom-de-votre-branche`). Après il vous suffit juste de faire un `git push origin nom-de-votre-branche` pour créer une Pull Request. Il faudra maintenant vous rendre dans le dépôt Github afin de finaliser votre Pull Request.
+
+🛑 Donc s'il vous plait, **créez d'abord une branche** avant de faire un `git push ...`.
+
 ## Pré-requis
 
 - [Composer](https://getcomposer.org/download/) v1.10 ou supérieure
