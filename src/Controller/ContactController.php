@@ -15,14 +15,11 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return $this->render('contact/index.php', ['title' => 'Accueil']);
+        return $this->render('contact/index.php');
     }
 
     public function show($id)
     {
-        return $this->render('contact/show.php', [
-            'title' => 'Resultat de la recherche',
-            'id' => $id
-        ]);
+        return $this->render('contact/show.php', compact('id'));
     }
 }
