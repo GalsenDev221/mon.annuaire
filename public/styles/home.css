@@ -1,0 +1,113 @@
+/* Info
+ * ==========
+ * This file contains the styles related to the homepage
+ *
+ * Table of contents
+ * ==========
+ * 1. Hero (styles for the hero section)
+ * 2. Search Form (styles for the search section)
+ * 3. Cards (styles for the cards)
+ * 4. Media query
+ *
+ */
+
+/* === 1. Hero === */
+.hero {
+  text-align: center;
+}
+
+.hero__title span {
+  color: var(--accent-1);
+}
+
+.hero__desc {
+  margin-top: 16px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === 2. Search form === */
+.form {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+  display: flex;
+  align-items: stretch;
+}
+
+.form > * + * {
+  margin-left: 16px;
+}
+
+.form .input {
+  width: 75%;
+}
+
+/* === 3. Cards === */
+.cards {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.card {
+  background: var(--primary);
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+}
+
+.card__header__name {
+  margin-left: 16px;
+}
+
+.card__header__name h2:last-child {
+  color: var(--tertiary);
+}
+
+.card__action {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.card__action > * + * {
+  margin-left: 16px;
+}
+
+/* === 4. Media Query === */
+@media (max-width: 550px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .form .input,
+  .form .btn {
+    width: 100%;
+  }
+
+  .form > * + * {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
