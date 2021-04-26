@@ -47,7 +47,7 @@ class Router
 
         // Envoie une page d'erreur si l'url n'existe pas
         $this->controller->render('404.php', ['title' => 'Page Introuvable']);
-        return header('HTTP/1.0 404 Not Found');
+        /* return header('HTTP/1.0 404 Not Found'); */
     }
 
     public function checkRoute($pathServer, $pathUser)

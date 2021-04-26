@@ -1,14 +1,33 @@
+/* Info
+ * ==========
+ * This file is used to define the base styles used in the layout.
+ * Each page in our app will have his own css file.
+ * This approach will help us to only load the styles needed for a page.
+ *
+ * Table of contents
+ * ==========
+ * 1. CSS Variables (this is where we define our color palette)
+ * 2. Resets (some base resets)
+ * 3. Misc (here we define the styles for some utils & components)
+ * 4. Navbar styles (styles for the navbar)
+ * 5. Footer styles (styles for the footer)
+ * 6. Media query
+ *
+ */
+
+/* === 1. CSS variables === */
 :root {
   --primary: #16161a;
   --secondary: #242629;
   --tertiary: #94a1b2;
+  --white: #fffffe;
 
   --accent-1: #7f5af0;
   --accent-2: #2cb67d;
   --accent-3: #d90000;
 }
 
-/* Resets */
+/* === 2. Resets === */
 *,
 *::before,
 *::after {
@@ -19,55 +38,137 @@
 
 body {
   background: var(--secondary);
-  color: white;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  padding-bottom: 80px; /* Delete after */
+main {
+  width: 100%;
+  flex: 1;
 }
 
 a {
   text-decoration: none;
 }
 
-/* utils & components */
+p {
+  color: var(--tertiary);
+  line-height: 1.5;
+}
 
+h1,
+h2 {
+  color: var(--white);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* === 3. Misc === */
 .btn {
   outline: none;
-  border: 1px solid transparent;
-  background: var(--accent-1);
-  color: white;
+  border: 2px solid transparent;
   padding: 12px 24px;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1;
   cursor: pointer;
+  transition: transform 0.2s ease-in;
+}
+
+.btn--primary {
+  background: var(--accent-1);
+  color: var(--white);
 }
 
 .btn--secondary {
   color: var(--accent-1);
-  border: 1px solid var(--accent-1);
+  border-color: var(--accent-1);
   background: transparent;
 }
 
-/* navbar */
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.input {
+  border: 2px solid transparent;
+  outline: none;
+  background: var(--primary);
+  padding: 12px 24px;
+  color: var(--tertiary);
+  line-height: 1;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.input:focus {
+  border-color: var(--accent-1);
+  color: var(--white);
+}
+
+.container {
+  max-width: 1200px;
+  margin-top: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+/* === 4. Navbar === */
 .nav {
   background: var(--primary);
-  padding: 16px 32px;
+  padding: 16px 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.nav__logo img {
+  width: 100%;
+}
+
 .nav__links {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.nav__links > * + * {
+  margin-left: 32px;
 }
 
 .nav__links__add {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--tertiary);
+  cursor: pointer;
+}
+
+.nav__links__add span,
+.nav__links__add svg path {
+  transition: all 0.4s ease-in-out;
+}
+
+.nav__links__add:hover span {
+  color: var(--white);
+}
+
+.nav__links__add:hover svg path {
+  fill: var(--white);
 }
 
 .nav__links__add > * + * {
@@ -75,102 +176,50 @@ a {
 }
 
 .nav__links__contribute {
-  margin-left: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* main */
-
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 32px;
-  padding-left: 32px;
-  margin-top: 64px;
+.nav__links__contribute svg path {
+  transition: fill 0.4s ease-in-out;
 }
 
-.hero {
-  text-align: center;
+.nav__links__contribute:hover svg path {
+  fill: var(--white);
 }
 
-.hero__text h1 span {
+/* === 5. Footer === */
+.footer {
+  margin-top: 100px;
+  background: var(--primary);
+  padding: 48px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__logo img {
+  width: 100%;
+}
+
+.footer__copy a {
   color: var(--accent-1);
 }
 
-.hero__text h1 {
-  font-weight: 700;
+.footer__copy:hover a {
+  text-decoration: underline;
 }
 
-.hero__desc {
-  margin-top: 16px;
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* === 6. Media Query === */
+@media (max-width: 700px) {
+  .nav,
+  .footer {
+    flex-direction: column;
+  }
 
-/* form */
-.form {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 32px;
-  display: flex;
-  align-items: center;
-}
-
-.form__input {
-  border: none;
-  outline: none;
-  background: var(--primary);
-  padding: 12px 24px;
-  color: var(--tertiary);
-  margin-right: 16px;
-  border-radius: 5px;
-  flex: 4;
-}
-
-.form .btn {
-  flex: 1;
-}
-
-/* cards section */
-.cards {
-  margin-top: 64px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.card {
-  background: var(--primary);
-  border-radius: 10px;
-  padding: 32px;
-}
-
-.card__header {
-  display: flex;
-  align-items: center;
-}
-
-.card__header__name {
-  margin-left: 32px;
-}
-
-.card__header__name h2 {
-  font-weight: 500;
-}
-
-.card__header__name h2:last-child {
-  color: var(--tertiary);
-}
-
-.card__action {
-  margin-top: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.card__action > * + * {
-  margin-left: 16px;
+  .nav__links,
+  .footer__copy {
+    margin-top: 16px;
+  }
 }
