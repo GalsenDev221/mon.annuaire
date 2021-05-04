@@ -11,10 +11,69 @@
  */
 
 /* === 1. Hero === */
-/* css here */
+.hero {
+    text-align: center;
+}
+
+.hero__title span {
+    color: var(--accent-1);
+}
+
+.hero__desc {
+    margin-top: 16px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* === 2. Adding Form === */
-/* css here */
+
+.form {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form > * + * {
+    margin-left: 16px;
+}
+
+.row  {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5% 2.5% 0 2.5%;
+}
+
+div.form-group {
+    margin: 0 2.5%;
+}
+
+div.last, div.form-group {
+    margin-bottom: 2.5%;
+}
+
+.col {
+    width: 47.5%;
+}
+
+.input {
+    width: 100%;
+}
+
+
+.btn-group {
+    margin-left: auto;
+    margin-right: 2.05%;
+}
+
+.btn-group button:last-child {
+    margin-left: 32px;
+}
+
 
 /* === 3. Media Query === */
 /* css here */
