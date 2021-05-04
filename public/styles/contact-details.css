@@ -4,17 +4,69 @@
  *
  * Table of contents
  * ==========
- * 1. Hero (styles for the hero section)
- * 2. Card Details (styles for the card details)
- * 3. Media query
+ * 1. Contact Info (styles for the contact's info)
+ * 2. Media query
  *
  */
 
-/* === 1. Hero === */
-/* css here */
+/* === 1. Contact Info === */
+.contact__name {
+  text-align: center;
+}
 
-/* === 2. Card Details === */
-/* css here */
+.contact__name img {
+  width: 150px;
+}
 
-/* === 3. Media Query === */
-/* css here */
+.contact__name h1 {
+  margin-top: 16px;
+  color: var(--accent-1);
+}
+
+.contact__name > *:last-child {
+  margin-top: 0;
+  color: var(--white);
+}
+
+.contact__details {
+  margin-top: 64px;
+  padding: 32px 64px;
+  border-radius: 10px;
+  background: var(--primary);
+}
+
+.contact__details__sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.contact__details__sections span {
+  color: var(--accent-2);
+}
+
+.contact__details__sections h2 {
+  margin-top: 16px;
+}
+
+.contact__details__action {
+  margin-top: 64px;
+  text-align: right;
+}
+
+/* === 2. Media Query === */
+@media (max-width: 950px) {
+  .contact__details__sections {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
+  }
+}
+
+@media (max-width: 750px) {
+  .contact__details {
+    padding: 32px;
+  }
+  .contact__details__sections {
+    grid-template-columns: min-content;
+    justify-content: center;
+  }
+}

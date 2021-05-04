@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Cet annuaire téléphonique est un petit projet réalisé par les membres de Galsen Dev.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <title>Galsen Annuaire | <?= $params['title'] ?></title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
