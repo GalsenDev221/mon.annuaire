@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="form-group">
-        <input type="text" class="input" placeholder="First name">
+        <input type="text" class="input" placeholder="Adresse">
     </div>
     <div class="btn-group">
     <button type="button" class="btn btn--secondary">Annuler</button> <!-- using type button for now -->
