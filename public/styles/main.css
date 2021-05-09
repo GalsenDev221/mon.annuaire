@@ -93,6 +93,12 @@ h2 {
 }
 
 .btn--secondary {
+  color: var(--accent-1);
+  border-color: var(--accent-1);
+  background: transparent;
+}
+
+.btn--tertiary {
   color: var(--tertiary);
   border-color: var(--tertiary);
   background: transparent;

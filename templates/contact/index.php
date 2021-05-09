@@ -10,25 +10,29 @@
     </div>
 </div>
 
-<form class="form" action="#" method="POST">
-    <input class="input" type="text" placeholder="Rechercher un contact">
-    <button type="button" class="btn btn--primary">Rechercher</button> <!-- using type button for now -->
+<form class="form" action="/search" method="POST">
+    <input class="input" type="text" name="prenom" placeholder="Rechercher un contact (par prénom)">
+    <button class="btn btn--primary">Rechercher</button>
 </form>
 
 <section class="cards">
-    <?php for ($i = 0; $i < 7; $i++): ?>
-        <div class="card">
-            <div class="card__header">
-                <img class="card__header__avatar" src="/img/avatar.png" alt="contact's avatar">
-                <div class="card__header__name">
-                    <h2>Prénom ici</h2>
-                    <h2>Nom ici</h2>
+    <?php if (!empty($params['contacts'])): ?>
+        <?php foreach ($params['contacts'] as $contact): ?>
+            <div class="card">
+                <div class="card__header">
+                    <img class="card__header__avatar" src="/img/avatar.png" alt="contact's avatar">
+                    <div class="card__header__name">
+                        <h2><?= $contact['prenom']?></h2>
+                        <h2><?= $contact['nom']?></h2>
+                    </div>
+                </div>
+                <div class="card__action">
+                    <a href="/contact/<?= $contact['id']?>" class="btn btn--primary">Afficher</a>
+                    <a href="/edit/contact/<?= $contact['id']?>" class="btn btn--secondary">Modifier</a>
                 </div>
             </div>
-            <div class="card__action">
-                <a href="/contact/12" class="btn btn--primary">Afficher</a>
-                <a href="#" class="btn btn--secondary">Modifier</a>
-            </div>
-        </div>
-    <?php endfor; ?>
+        <?php endforeach ?>
+    <?php else: ?>
+        <h2>Pas de contacts</h2>
+    <?php endif ?>
 </section>

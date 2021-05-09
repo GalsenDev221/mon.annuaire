@@ -6,28 +6,28 @@
     </div>
 </div>
 
-<form class="form" action="#" method="POST">
+<form class="form" action="/store" method="POST">
     <div class="row">
         <div class="col">
-            <input type="text" class="input" placeholder="Prénom">
+            <input type="text" name="prenom" class="input" placeholder="Prénom">
         </div>
         <div class="col">
-            <input type="text" class="input" placeholder="Nom">
+            <input type="text" name="nom" class="input" placeholder="Nom">
         </div>
     </div>
     <div class="row last">
         <div class="col">
-            <input type="text" class="input" placeholder="Tel">
+            <input type="text" name="telephone" class="input" placeholder="Tel">
         </div>
         <div class="col">
-            <input type="email" class="input" placeholder="Email">
+            <input type="email" name="email" class="input" placeholder="Email">
         </div>
     </div>
     <div class="form-group">
-        <input type="text" class="input" placeholder="Adresse">
+        <input type="text" name="adresse" class="input" placeholder="Adresse">
     </div>
     <div class="btn-group">
-    <button type="button" class="btn btn--secondary">Annuler</button> <!-- using type button for now -->
-    <button type="button" class="btn btn--primary">Ajouter</button> <!-- using type button for now -->
+        <a href="/" class="btn btn--tertiary">Annuler</a>
+        <button class="btn btn--primary">Ajouter</button>
     </div>
 </form>
