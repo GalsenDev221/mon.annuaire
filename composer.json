@@ -1,12 +1,12 @@
 {
-  "name": "p4p1/mon_annuaire",
-  "description": "Un petit projet",
+  "name": "galsendev221/mon_annuaire",
+  "description": "Annuaire téléphonique web (CRUD).",
   "type": "project",
   "license": "MIT",
   "authors": [
     {
-      "name": "Abdoulaye NDOYE",
-      "email": "pa.ndoye@outlook.fr"
+      "name": "Galsen DEV",
+      "email": "galsendev221@gmail.com"
     }
   ],
   "minimum-stability": "dev",
